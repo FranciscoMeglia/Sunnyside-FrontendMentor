@@ -1,0 +1,854 @@
+// IMPORTS
+@import '../mediaQ/mediaq.scss';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    // MAIN
+    main {
+        width: 100%;
+        height: 950px;
+        background-image: url(/images/desktop/image-header.jpg);
+        background-size: cover;
+
+        @include mobile {
+            background-image: url(/images/mobile/image-header.jpg);
+        }
+
+        @include mobile2 {
+            height: 600px;
+        }
+
+        // NAVBAR
+        nav {
+            width: 100%;
+            height: 70px;
+            // background-color: aquamarine;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .nav-1 {
+                padding-left: 50px;
+                width: auto;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                img {
+                    width: 150px;
+                }
+            }
+
+            .nav-2 {
+                height: 100%;
+                padding-right: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                ul {
+                    margin-top: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+                    list-style: none;
+
+                    @include tablet {
+                        display: none;
+                    }
+
+                    li a {
+                        text-decoration: none;
+                        color: white;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        font-size: 20px;
+                        font-weight: 200;
+                        transition: 0.2s;
+                    }
+
+                    li a:hover {
+                        color: rgb(180, 245, 245);
+                    }
+
+                    button {
+                        width: 130px;
+                        height: 55px;
+                        border-radius: 28px;
+                        border: none;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        font-weight: 600;
+                        font-size: 18px;
+                        transition: 0.2s;
+                    }
+
+                    button:hover {
+                        cursor: pointer;
+                        background-color: rgba(255, 255, 255, 0.5);
+                    }
+                }
+
+                img {
+                    display: none;
+
+                    @include tablet {
+                        margin-top: 35px;
+                        display: block;
+                    }
+                }
+
+                img:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .navMobile {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(144, 233, 218);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+
+            .nav-1 {
+                display: none;
+            }
+
+            .nav-2 {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 30px;
+                    list-style: none;
+
+                    li a {
+                        text-decoration: none;
+                        color: rgb(51, 46, 46);
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        font-size: 30px;
+                        font-weight: 200;
+                        transition: 0.2s;
+                    }
+
+                    li a:hover {
+                        color: rgb(97, 148, 148);
+                    }
+
+                    button {
+                        width: 140px;
+                        height: 60px;
+                        border-radius: 28px;
+                        border: none;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        font-weight: 600;
+                        font-size: 18px;
+                        transition: 0.2s;
+                    }
+
+                    button:hover {
+                        cursor: pointer;
+                        background-color: rgba(32, 32, 32, 0.5);
+                    }
+                }
+
+                img {
+                    display: flex;
+                    position: absolute;
+                    right: 6.5vw;
+                    top: 1vh;
+                }
+
+                img:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .info {
+            width: auto;
+            height: auto;
+            margin: 150px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 100px;
+
+            @include mobile2 {
+                margin: 30px auto;
+                gap: 60px;
+            }
+
+            h1 {
+                font-family: 'Fraunces', serif;
+                font-size: 60px;
+                color: white;
+                letter-spacing: 10px;
+
+                @include mobile {
+                    text-align: center;
+                }
+
+                @include mobile2 {
+                    font-size: 40px;
+                }
+            }
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+    // cards
+    .cards {
+        width: 100%;
+        height: auto;
+
+        .card-1-2 {
+            width: 100%;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: antiquewhite;
+
+            @include tablet {
+                flex-direction: column-reverse;
+                height: auto;
+            }
+
+            .card-1 {
+                width: 50%;
+                height: 100%;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include tablet {
+                    width: 100%;
+                    height: 400px;
+                }
+
+                @include mobile2 {
+                    height: auto;
+                }
+
+                .card-1-info {
+                    width: 450px;
+                    height: 80%;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    @include mobile {
+                        width: 100%;
+                        height: 100%;
+                        align-items: center;
+                    }
+
+                    h3 {
+                        font-family: 'Fraunces', serif;
+                        font-size: 50px;
+                        color: rgb(41, 41, 41);
+                        padding-bottom: 0;
+                        margin-bottom: 10px;
+
+                        @include mobile {
+                            text-align: center;
+                            font-size: 40px;
+                        }
+                    }
+
+                    p {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 18px;
+                        line-height: 30px;
+                        margin-bottom: 40px;
+                    }
+
+                    a {
+                        font-family: 'Fraunces', serif;
+                        text-decoration: none;
+                        color: rgb(41, 41, 41);
+                        border-bottom: 4px solid orange;
+
+                        @include mobile2 {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+
+            .card-2 {
+                width: 50%;
+                height: 100%;
+                background-image: url(/images/desktop/image-transform.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                @include tablet {
+                    width: 100%;
+                    height: 400px;
+                }
+
+                @include mobile {
+                    background-image: url(/images/mobile/image-transform.jpg);
+                }
+
+                @include mobile2 {
+                    height: 300px;
+                }
+            }
+        }
+
+        .card-3-4 {
+            width: 100%;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(109, 107, 104);
+
+            @include tablet {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .card-3 {
+                width: 50%;
+                height: 100%;
+                background-image: url(/images/desktop/image-stand-out.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+
+                @include tablet {
+                    width: 100%;
+                    height: 400px;
+                }
+
+                @include mobile {
+                    background-image: url(/images/mobile/image-stand-out.jpg);
+                }
+
+                @include mobile2 {
+                    height: 300px;
+                }
+            }
+
+            .card-4 {
+                width: 50%;
+                height: 100%;
+                background-color: white;
+                background-repeat: no-repeat;
+
+                @include tablet {
+                    width: 100%;
+                    height: 400px;
+                }
+
+                @include mobile2 {
+                    height: auto;
+                }
+
+                .card-4-info {
+                    width: 530px;
+                    height: 80%;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+
+                    @include mobile {
+                        width: 100%;
+                        height: 100%;
+                        align-items: center;
+                    }
+
+                    h3 {
+                        font-family: 'Fraunces', serif;
+                        font-size: 50px;
+                        color: rgb(41, 41, 41);
+                        padding-bottom: 0;
+                        margin-bottom: 10px;
+
+                        @include mobile {
+                            text-align: center;
+                            font-size: 40px;
+                        }
+                    }
+
+                    p {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 18px;
+                        line-height: 30px;
+                        margin-bottom: 40px;
+                    }
+
+                    a {
+                        font-family: 'Fraunces', serif;
+                        text-decoration: none;
+                        color: rgb(41, 41, 41);
+                        border-bottom: 4px solid rgb(240, 168, 204);
+
+                        @include mobile2 {
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .card-5-6 {
+            width: 100%;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(102, 88, 67);
+
+            @include tablet {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .card-5 {
+                width: 50%;
+                height: 100%;
+                background-image: url(/images/desktop/image-graphic-design.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                @include tablet {
+                    width: 100%;
+                    height: 500px;
+                }
+
+                @include mobile2 {
+                    background-image: url(/images/mobile/image-graphic-design.jpg);
+                }
+
+                .card-5-info {
+                    width: 360px;
+                    height: 30%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h3 {
+                        font-family: 'Fraunces', serif;
+                        font-size: 30px;
+                        color: rgb(55, 110, 96);
+                    }
+
+                    p {
+                        text-align: center;
+                        color: rgb(55, 110, 96);
+                        padding-bottom: 40px;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+            }
+
+            .card-6 {
+                width: 50%;
+                height: 100%;
+                background-image: url(/images/desktop/image-photography.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                @include tablet {
+                    width: 100%;
+                    height: 500px;
+                }
+
+                @include mobile2 {
+                    background-image: url(/images/mobile/image-photography.jpg);
+                }
+
+                .card-6-info {
+                    width: 360px;
+                    height: 30%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h3 {
+                        font-family: 'Fraunces', serif;
+                        font-size: 30px;
+                        color: rgb(65, 127, 168);
+                    }
+
+                    p {
+                        text-align: center;
+                        color: rgb(65, 127, 168);
+                        padding-bottom: 40px;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .testimonials {
+        width: 100%;
+        height: 780px;
+        background-color: white;
+
+        @include tablet {
+            height: auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: 'Fraunces', serif;
+            color: hsl(232, 10%, 55%);
+            padding-top: 150px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+            @include tablet {
+                padding-top: 30px;
+                padding-bottom: 50px;
+            }
+        }
+
+        .testimonials-container {
+            width: 100%;
+            height: 400px;
+            padding: 0;
+            margin: 0 auto;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+
+            @include tablet {
+                flex-direction: column;
+                gap: 50px;
+                height: auto;
+            }
+
+            .testimonials-1 {
+                width: 300px;
+                height: 100%;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 80px;
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    text-align: center;
+                    width: 300px;
+                    font-weight: 600;
+                    color: hsl(213, 9%, 39%);
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                h3 {
+                    font-family: 'Fraunces', serif;
+                    padding-bottom: 0;
+                    margin-bottom: 5px;
+                }
+
+                .down {
+                    font-family: Arial, Helvetica, sans-serif;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 14px;
+                    color: hsl(236, 9%, 68%);
+                }
+            }
+
+            .testimonials-2 {
+                width: 300px;
+                height: 100%;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 80px;
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    text-align: center;
+                    width: 300px;
+                    font-weight: 600;
+                    color: hsl(213, 9%, 39%);
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                h3 {
+                    font-family: 'Fraunces', serif;
+                    padding-bottom: 0;
+                    margin-bottom: 5px;
+                }
+
+                .down {
+                    font-family: Arial, Helvetica, sans-serif;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 14px;
+                    color: hsl(236, 9%, 68%);
+                }
+            }
+
+            .testimonials-3 {
+                width: 300px;
+                height: 100%;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 80px;
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    text-align: center;
+                    width: 300px;
+                    font-weight: 600;
+                    color: hsl(213, 9%, 39%);
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                h3 {
+                    font-family: 'Fraunces', serif;
+                    padding-bottom: 0;
+                    margin-bottom: 5px;
+                }
+
+                .down {
+                    font-family: Arial, Helvetica, sans-serif;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 14px;
+                    color: hsl(236, 9%, 68%);
+
+                    @include tablet {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    .photos {
+        width: 100%;
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: antiquewhite;
+
+        @include tablet {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .photo-1-2 {
+            width: 50%;
+            height: 100%;
+            display: flex;
+
+            @include tablet {
+                height: auto;
+                width: 100%;
+            }
+
+            .photo-1 {
+                background-image: url(/images/desktop/image-gallery-milkbottles.jpg);
+                width: 50%;
+                height: 100%;
+                background-size: cover;
+
+                @include tablet {
+                    width: 50%;
+                    height: 400px;
+                }
+
+                @include mobile2 {
+                    background-image: url(/images/mobile/image-gallery-milkbottles.jpg);
+                    height: 300px;
+                }
+
+                @include mobile3 {
+                    height: 200px;
+                }
+            }
+
+            .photo-2 {
+                width: 50%;
+                height: 100%;
+                background-image: url(/images/desktop/image-gallery-orange.jpg);
+                background-size: cover;
+
+                @include tablet {
+                    width: 50%;
+                    height: 400px;
+                }
+
+                @include mobile2 {
+                    height: 300px;
+                    background-image: url(/images/mobile/image-gallery-orange.jpg);
+                }
+
+                @include mobile3 {
+                    height: 200px;
+                }
+            }
+        }
+
+        .photo-3-4 {
+            width: 50%;
+            height: 100%;
+            display: flex;
+
+            @include tablet {
+                height: auto;
+                width: 100%;
+            }
+
+            .photo-3 {
+                width: 50%;
+                height: 100%;
+                background-image: url(/images/desktop/image-gallery-cone.jpg);
+                background-size: cover;
+
+                @include tablet {
+                    width: 50%;
+                    height: 400px;
+                }
+
+                @include mobile2 {
+                    height: 300px;
+                    background-image: url(/images/mobile/image-gallery-cone.jpg);
+                }
+
+                @include mobile3 {
+                    height: 200px;
+                }
+            }
+
+            .photo-4 {
+                width: 50%;
+                height: 100%;
+                background-image: url(/images/desktop/image-gallery-sugarcubes.jpg);
+                background-size: cover;
+
+                @include tablet {
+                    width: 50%;
+                    height: 400px;
+                }
+
+                @include mobile2 {
+                    height: 300px;
+                    background-image: url(/images/mobile/image-gallery-sugar-cubes.jpg);
+                }
+
+                @include mobile3 {
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: 100%;
+        height: 300px;
+        background-color: rgb(115, 204, 182);
+
+        .footer-container {
+            width: 400px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+
+            @include mobile2 {
+                width: 100%;
+            }
+
+            h2 {
+                font-family: 'Fraunces', serif;
+                color: rgb(55, 110, 96);
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .links {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                margin: 0;
+                padding-bottom: 30px;
+
+                a {
+                    text-decoration: none;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: rgb(55, 110, 96);
+                }
+            }
+
+            .icons {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+            }
+        }
+    }
+}
